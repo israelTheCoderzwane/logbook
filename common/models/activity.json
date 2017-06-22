@@ -1,0 +1,29 @@
+{
+  "name": "Activity",
+  "plural": "Activities",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "Name": {
+      "type": "string",
+      "required": true
+    },
+    "DateFrom": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    },
+    "DateTo": {
+      "type": "date",
+      "required": true,
+      "defaultFn": "now"
+    }
+  },
+  "validations": [],
+  "relations": {},
+  "acls": [],
+  "methods": {}
+}

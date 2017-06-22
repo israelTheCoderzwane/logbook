@@ -1,0 +1,11 @@
+{
+  "logbookds": {
+    "host": "ds131492.mlab.com",
+    "port": "31492",
+    "database": "logbook",
+    "password": "admin",
+    "name": "logbookds",
+    "connector": "mongodb",
+    "user": "admin"
+  }
+}
