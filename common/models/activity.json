@@ -3,10 +3,11 @@
   "plural": "Activities",
   "base": "PersistedModel",
   "idInjection": true,
-    "forceId":false,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
+  
   "properties": {
     "actName": {
       "type": "string",
@@ -29,7 +30,6 @@
     },
     "Comment": {
       "type": "object"
-        
     }
   },
   "validations": [],
@@ -37,6 +37,11 @@
     "objective": {
       "type": "belongsTo",
       "model": "Objective",
+      "foreignKey": "id"
+    },
+    "remarks": {
+      "type": "hasOne",
+      "model": "Remarks",
       "foreignKey": "id"
     }
   },

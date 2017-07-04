@@ -47,5 +47,13 @@
   "Objective": {
     "dataSource": "logbookds",
     "public": true
+  },
+  "subject": {
+    "dataSource": "logbookds",
+    "public": true
+  },
+  "Remarks": {
+    "dataSource": "logbookds",
+    "public": true
   }
 }

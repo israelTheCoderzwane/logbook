@@ -3,11 +3,11 @@
   "plural": "logbook_Users",
   "base": "User",
   "idInjection": true,
-    "forceId":false,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
+  
   "properties": {
     "name": {
       "type": "string",
