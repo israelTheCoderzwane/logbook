@@ -3,7 +3,6 @@
   "plural": "logbook_Users",
   "base": "User",
   "idInjection": true,
-    "forceId":false,
   "options": {
     "validateUpsert": true
   },

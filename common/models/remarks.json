@@ -1,33 +1,31 @@
 {
-  "name": "Objective",
-  "plural": "Objectivies",
+  "name": "Remarks",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
   "properties": {
-    "title": {
+    "subject": {
       "type": "string",
       "required": true
     },
-    "Description": {
+    "comment": {
       "type": "string",
       "required": true
     }
   },
   "validations": [],
   "relations": {
-    "logbookUser": {
+    "activity": {
       "type": "belongsTo",
-      "model": "logbook_User",
-      "foreignKey": "id"
+      "model": "Activity",
+      "foreignKey": ""
     },
     "activities": {
       "type": "hasMany",
       "model": "Activity",
-      "foreignKey": "id"
+      "foreignKey": ""
     }
   },
   "acls": [
@@ -38,21 +36,15 @@
       "permission": "DENY"
     },
     {
-      "accessType": "WRITE",
-      "principalType": "ROLE",
-      "principalId": "mentor",
-      "permission": "ALLOW"
-    },
-    {
       "accessType": "*",
       "principalType": "ROLE",
       "principalId": "mentor",
       "permission": "ALLOW"
     },
     {
-      "accessType": "*",
+      "accessType": "READ",
       "principalType": "ROLE",
-      "principalId": "$authenticated",
+      "principalId": "intern",
       "permission": "ALLOW"
     }
   ],
