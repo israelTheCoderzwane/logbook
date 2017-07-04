@@ -3,10 +3,11 @@
   "plural": "Objectivies",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
+  
   "properties": {
     "title": {
       "type": "string",

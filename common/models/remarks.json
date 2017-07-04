@@ -2,6 +2,7 @@
   "name": "Remarks",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
@@ -19,11 +20,6 @@
   "relations": {
     "activity": {
       "type": "belongsTo",
-      "model": "Activity",
-      "foreignKey": ""
-    },
-    "activities": {
-      "type": "hasMany",
       "model": "Activity",
       "foreignKey": ""
     }

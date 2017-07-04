@@ -3,10 +3,11 @@
   "plural": "Activities",
   "base": "PersistedModel",
   "idInjection": true,
+  "forceId": false,
   "options": {
     "validateUpsert": true
   },
-  "forceId": false,
+  
   "properties": {
     "actName": {
       "type": "string",
