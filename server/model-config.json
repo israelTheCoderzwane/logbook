@@ -14,7 +14,8 @@
     ]
   },
   "User": {
-    "dataSource": "logbookds"
+    "dataSource": "logbookds",
+    "public": false
   },
   "AccessToken": {
     "dataSource": "logbookds",
@@ -35,11 +36,15 @@
     "dataSource": "logbookds",
     "public": false
   },
+  "logbook_User": {
+    "dataSource": "logbookds",
+    "public": true
+  },
   "Activity": {
     "dataSource": "logbookds",
     "public": true
   },
-  "Attachment": {
+  "Objective": {
     "dataSource": "logbookds",
     "public": true
   }
