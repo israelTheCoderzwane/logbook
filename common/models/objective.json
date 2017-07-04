@@ -1,6 +1,6 @@
 {
-  "name": "Activity",
-  "plural": "Activities",
+  "name": "Objective",
+  "plural": "Objectivies",
   "base": "PersistedModel",
   "idInjection": true,
     "forceId":false,
@@ -8,35 +8,25 @@
     "validateUpsert": true
   },
   "properties": {
-    "actName": {
+    "title": {
       "type": "string",
       "required": true
     },
-    "dateFrom": {
-      "type": "date",
+    "Description": {
+      "type": "string",
       "required": true
-    },
-    "dateTo": {
-      "type": "date",
-      "required": true
-    },
-    "hours": {
-      "type": "number",
-      "required": true
-    },
-    "Attachment": {
-      "type": "object"
-    },
-    "Comment": {
-      "type": "object"
-        
     }
   },
   "validations": [],
   "relations": {
-    "objective": {
+    "logbookUser": {
       "type": "belongsTo",
-      "model": "Objective",
+      "model": "logbook_User",
+      "foreignKey": "id"
+    },
+    "activities": {
+      "type": "hasMany",
+      "model": "Activity",
       "foreignKey": "id"
     }
   },
@@ -48,9 +38,15 @@
       "permission": "DENY"
     },
     {
+      "accessType": "WRITE",
+      "principalType": "ROLE",
+      "principalId": "mentor",
+      "permission": "ALLOW"
+    },
+    {
       "accessType": "*",
       "principalType": "ROLE",
-      "principalId": "intern",
+      "principalId": "mentor",
       "permission": "ALLOW"
     },
     {
